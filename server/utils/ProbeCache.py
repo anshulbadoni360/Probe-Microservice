@@ -36,7 +36,7 @@ class ProbeCache:
     async def delete(self, key: str) -> bool:
         """Delete probe state from cache"""
         try:
-            await self.redis.delete(key)
+            await self.redis.delete(f"probe:{key}")
             return True
         except Exception as e:
             logger.error(f"Cache delete error: {e}")

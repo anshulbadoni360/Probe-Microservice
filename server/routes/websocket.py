@@ -62,13 +62,14 @@ async def websocket_ai_qa(websocket: WebSocket):
                     config=question_config,
                 )
                 current_key = f"{survey_response.su_id}-{survey_response.qs_id}-{survey_response.mo_id}"
-                session_no = await probe_cache.get(current_key) or 0 
+                session_data = await probe_cache.get(current_key) or {}
+                session_no = session_data.get("session_no", 0)
                 probe = Probe(
                     mo_id=survey_response.mo_id,
                     metadata=survey,
                     question=question,
                     simple_store=True,
-                    session_no=session_no.get("session_no"),
+                    session_no=session_no,
                     survey_details=survey_response
                 )
                 counter = 0
