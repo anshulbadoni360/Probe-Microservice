@@ -1,4 +1,4 @@
-    from enum import Enum
+from enum import Enum
 from bson import ObjectId
 from pydantic_core import core_schema
 
