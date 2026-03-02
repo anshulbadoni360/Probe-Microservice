@@ -2,7 +2,6 @@ key.txt
 /.venv/
 /venv/
 *.pyc
-requirements.txt
 /server/notebooks/
 *.env
 /scripts/

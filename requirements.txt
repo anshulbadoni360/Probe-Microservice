@@ -1,0 +1,18 @@
+# requirements.txt
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+websockets==12.0
+redis[hiredis]==5.0.1
+pydantic==2.5.0
+motor==3.3.2  
+aiomysql==0.2.0 
+asyncmy==0.2.9
+pymongo==4.6.0
+bson==0.5.10
+python-dotenv==1.0.0
+pytz
+langsmith
+langchain
+langchain-openai
+langchain-deepseek
+langchain-ollama
