@@ -54,9 +54,22 @@ async def lifespan(app: FastAPI):
     logger.info("Shutdown complete",logger.success)
 
 
-app = FastAPI(lifespan=lifespan)
-app.include_router(websocket_router)
+app = FastAPI(
+    lifespan=lifespan,
+    root_path="/probe_engine",
+    title="probe engine microservice",
+    description="probe engine microservice",
+    summary="probe engine microservice",
+    version="1.0.0",
+    terms_of_service="https://www.monetanalytics.com/#/terms-and-conditions",
+    contact={
+        "name": "Monet Networks Inc.",
+        "url": "https://www.monetanalytics.com/#/contact-us",
+        "email": "anshul.badoni@ashmar.in",
+    },
+)
 
+app.include_router(websocket_router)
 
 @app.get("/")
 def root():
