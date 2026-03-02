@@ -1,0 +1,20 @@
+fastapi
+uvicorn
+python-dotenv
+redis
+motor
+pymongo
+langchain
+langchain-openai
+langchain-ollama
+langchain-deepseek
+langchain-community
+langchain-core
+langsmith
+pydantic
+pytz
+openai
+langchain-openai
+langchain-ollama
+langchain-deepseek
+# bson is usually included in pymongo
